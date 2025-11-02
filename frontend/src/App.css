@@ -18,6 +18,33 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.row {
+  background-color: blue;
+}
+
+.message-row-sent {
+  display: flex;
+  justify-content: end;
+}
+
+.message {
+  display: flex;
+  width: fit-content;
+  margin: 0;
+  padding: 0rem 1rem;
+
+}
+
+.message-rec {
+  background: #f33d3dff;
+  border-radius: 1rem 1rem 1rem 0rem;
+}
+
+.message-sent {
+  background: rgb(25, 117, 197);
+  border-radius: 1rem 1rem 0rem 1rem;
+}
+
 .emoji {
   font-size: 100px;
   user-select: none;
@@ -27,6 +54,8 @@
 .emoji:hover {
   font-size: 120px;
 }
+
+
 
 @keyframes logo-spin {
   from {

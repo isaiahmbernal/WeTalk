@@ -27,3 +27,15 @@ nvm use default
 ```bash
 node -v
 ```
+
+5. cd into the frontend directory and install node dependencies
+
+```bash
+npm install
+```
+
+6. Start the frontend
+
+```bash
+npm run dev
+```

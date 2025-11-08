@@ -1,81 +1,287 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  ---black: #000;
+  ---white: #fff;
+  ---blue: #007aff;
+  ---red: rgb(255, 59, 48);
+
+  ---xxs: 0.25rem;
+  ---xs: 0.5rem;
+  ---sm: 0.75rem;
+  ---md: 1rem;
+  ---lg: 1.5rem;
+  ---xl: 2rem;
+  ---xxl: 4rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.row {
-  background-color: blue;
-}
-
-.message-row-sent {
-  display: flex;
-  justify-content: end;
-}
-
-.message {
-  display: flex;
-  width: fit-content;
+* {
   margin: 0;
-  padding: 0rem 1rem;
-
+  padding: 0;
 }
 
-.message-rec {
-  background: #f33d3dff;
-  border-radius: 1rem 1rem 1rem 0rem;
+/* -------- Position */
+
+.pos-sticky {
+  position: sticky;
 }
 
-.message-sent {
-  background: rgb(25, 117, 197);
-  border-radius: 1rem 1rem 0rem 1rem;
-}
+/* -------- Mouse */
 
-.emoji {
-  font-size: 100px;
-  user-select: none;
+.pointer {
   cursor: pointer;
 }
 
-.emoji:hover {
-  font-size: 120px;
+/* -------- Flexbox */
+
+.border-box {
+  box-sizing: border-box;
 }
 
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+.justify-start {
+  justify-content: start;
 }
 
-.read-the-docs {
-  color: #888;
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.gap-xxs {
+  gap: var(---xxs);
+}
+
+.gap-xs {
+  gap: var(---xs);
+}
+
+.gap-sm {
+  gap: var(---sm);
+}
+
+.gap-md {
+  gap: var(---md);
+}
+
+.gap-lg {
+  gap: var(---lg);
+}
+
+.gap-xl {
+  gap: var(---xl);
+}
+
+.gap-xxl {
+  gap: var(---xxl);
+}
+
+/* -------- Width + Height */
+
+.w-min-none {
+  min-width: 0;
+}
+
+.w-min-full {
+  min-width: 100%;
+}
+
+.w-min-screen {
+  min-width: 100vw;
+}
+
+.w-max-none {
+  max-width: none;
+}
+
+.w-max-full {
+  max-width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-min-none {
+  min-height: none;
+}
+
+.h-min-full {
+  min-height: 100%;
+}
+
+.h-min-screen {
+  min-height: 100vh;
+}
+
+.h-max-none {
+  max-height: none;
+}
+
+.h-max-full {
+  max-height: 100%;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* -------- Background */
+
+.bg-black {
+  background-color: var(---black);
+}
+
+.bg-white {
+  background-color: var(---white);
+}
+
+.bg-blue {
+  background-color: var(---blue);
+}
+
+.bg-red {
+  background-color: var(---red);
+}
+
+/* -------- Text */
+
+.txt-black {
+  color: var(---black);
+}
+
+.txt-white {
+  color: var(---white);
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-light {
+  font-weight: normal;
+}
+
+.font-sm {
+  font-size: small;
+}
+
+.font-xs {
+  font-size: x-small;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* -------- Padding */
+
+.px-xxs {
+  padding-left: var(---xxs);
+  padding-right: var(---xxs);
+}
+
+.px-xs {
+  padding-left: var(---xs);
+  padding-right: var(---xs);
+}
+
+.px-sm {
+  padding-left: var(---sm);
+  padding-right: var(---sm);
+}
+
+.px-md {
+  padding-left: var(---md);
+  padding-right: var(---md);
+}
+
+.px-lg {
+  padding-left: var(---lg);
+  padding-right: var(---lg);
+}
+
+.px-xl {
+  padding-left: var(---xl);
+  padding-right: var(---xl);
+}
+
+.px-xxl {
+  padding-left: var(---xxl);
+  padding-right: var(---xxl);
+}
+
+.py-xxs {
+  padding-top: var(---xxs);
+  padding-bottom: var(---xxs);
+}
+
+.py-xs {
+  padding-top: var(---xs);
+  padding-bottom: var(---xs);
+}
+
+.py-sm {
+  padding-top: var(---sm);
+  padding-bottom: var(---sm);
+}
+
+.py-md {
+  padding-top: var(---md);
+  padding-bottom: var(---md);
+}
+
+.py-lg {
+  padding-top: var(---lg);
+  padding-bottom: var(---lg);
+}
+
+.py-xl {
+  padding-top: var(---xl);
+  padding-bottom: var(---xl);
+}
+
+.py-xxl {
+  padding-top: var(---xxl);
+  padding-bottom: var(---xxl);
 }
